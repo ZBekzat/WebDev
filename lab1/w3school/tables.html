@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Tables Examples</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            width: 50%;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 6px 10px;
+        }
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Tables — Examples</h1>
+
+    <!-- Example 1: Simple table -->
+    <table>
+        <!-- Table header -->
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+
+        <!-- Table body -->
+        <tbody>
+            <tr>
+                <td>Alex</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>22</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Example 2: Table with prices -->
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apple</td>
+                <td>$1</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>$0.50</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Example 3: colspan (merge columns) -->
+    <table>
+        <tr>
+            <th colspan="2">Student Info</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>John</td>
+        </tr>
+    </table>
+
+    <!-- Example 4: rowspan (merge rows) -->
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Subject</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Monday</td>
+            <td>Math</td>
+        </tr>
+        <tr>
+            <td>English</td>
+        </tr>
+    </table>
+
+</body>
+</html>

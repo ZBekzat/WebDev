@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.-->
+<!--You can set the color of text:-->
+<h1 style="background-color:DodgerBlue;">Hello World</h1>
+<h1 style="color:Tomato;">Hello World</h1>
+<p style="color:DodgerBlue;">Example text</p>
+<p style="color:MediumSeaGreen;">Demonstration</p>
+<!--You can set the color of borders:-->
+<h1 style="border:2px solid Tomato;">Hello World</h1>
+<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+<h1 style="border:2px solid Violet;">Hello World</h1>
+<h1 style="background-color:rgb(255, 99, 71);">Hello World</h1>
+<h1 style="background-color:#ff6347;">Hello World</h1>
+<h1 style="background-color:hsl(9, 100%, 64%);">Hello World</h1>
+<h1 style="background-color:rgba(255, 99, 71, 0.5);">Hello World</h1>
+<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">Hello World</h1>
+<!--An RGB color value represents RED, GREEN, and BLUE light sources.-->
+<!--In HTML, a color can be specified as an RGB value, using this formula:
+rgb(red, green, blue)-->
+<h1 style="background-color:rgb(255, 0, 0);">rgb(255, 0, 0)</h1>
+<h1 style="background-color:rgb(0, 0, 255);">rgb(0, 0, 255)</h1>
+<h1 style="background-color:rgb(60, 179, 113);">rgb(60, 179, 113)</h1>
+<!--A hexadecimal color is specified with: #RRGGBB,
+where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color.-->
+<!--In HTML, a color can be specified using a hexadecimal value in the form:
+#rrggbb-->
+<h1 style="background-color:#ff0000;">#ff0000</h1>
+<h1 style="background-color:#0000ff;">#0000ff</h1>
+<h1 style="background-color:#3cb371;">#3cb371</h1>
+
+<!--HSL stands for hue, saturation, and lightness.-->
+<!--In HTML, a color can be specified using hue, saturation, and lightness (HSL) in the form:
+hsl(hue, saturation, lightness)-->
+<h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>
+<h1 style="background-color:hsl(240, 100%, 50%);">hsl(240, 100%, 50%)</h1>
+<h1 style="background-color:hsl(147, 50%, 47%);">hsl(147, 50%, 47%)</h1>
+</body>
+</html>
