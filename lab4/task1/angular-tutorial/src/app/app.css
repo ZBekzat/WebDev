@@ -1,0 +1,18 @@
+﻿.topbar {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 14px 22px;
+}
+
+.logo {
+  color: #0284c7;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}

@@ -1,0 +1,9 @@
+﻿<article class="card">
+  <img [src]="housingLocation().photo" [alt]="housingLocation().name" />
+
+  <div class="card-content">
+    <h2>{{ housingLocation().name }}</h2>
+    <p>{{ housingLocation().city }}, {{ housingLocation().state }}</p>
+    <a [routerLink]="['/details', housingLocation().id]">Learn more</a>
+  </div>
+</article>

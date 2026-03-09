@@ -1,0 +1,12 @@
+﻿<section class="heading">
+  <h1>Kaspi Product Catalog</h1>
+  <p>
+    Products: <strong>{{ products.length }}</strong>
+  </p>
+</section>
+
+<section class="grid">
+  @for (item of products; track item.id) {
+    <app-product-card [product]="item"></app-product-card>
+  }
+</section>

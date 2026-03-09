@@ -1,0 +1,46 @@
+﻿:host {
+  display: block;
+  min-height: 100vh;
+  background: #f4f6f8;
+}
+
+.topbar {
+  align-items: center;
+  background: #ffffff;
+  border-bottom: 1px solid #dde3ea;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  color: #111827;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-links a {
+  color: #475569;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #0ea5e9;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 20px;
+}

@@ -1,0 +1,32 @@
+﻿.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.card img {
+  display: block;
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-content {
+  padding: 12px;
+}
+
+.card-content h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.card-content p {
+  color: #64748b;
+}
+
+.card-content a {
+  color: #0284c7;
+  font-weight: 600;
+  text-decoration: none;
+}

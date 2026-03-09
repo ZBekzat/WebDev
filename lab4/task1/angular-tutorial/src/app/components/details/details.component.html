@@ -1,0 +1,36 @@
+﻿@if (housingLocation; as location) {
+  <section class="details">
+    <img [src]="location.photo" [alt]="location.name" />
+
+    <div class="details-body">
+      <h1>{{ location.name }}</h1>
+      <p class="location">{{ location.city }}, {{ location.state }}</p>
+
+      <ul>
+        <li>Available units: {{ location.availableUnits }}</li>
+        <li>Wi-Fi: {{ location.wifi ? 'Yes' : 'No' }}</li>
+        <li>Laundry: {{ location.laundry ? 'Yes' : 'No' }}</li>
+      </ul>
+
+      <form [formGroup]="applyForm" (submit)="submitApplication()">
+        <h2>Apply now</h2>
+        <label>
+          First Name
+          <input type="text" formControlName="firstName" />
+        </label>
+
+        <label>
+          Last Name
+          <input type="text" formControlName="lastName" />
+        </label>
+
+        <label>
+          Email
+          <input type="email" formControlName="email" />
+        </label>
+
+        <button type="submit">Apply</button>
+      </form>
+    </div>
+  </section>
+}
