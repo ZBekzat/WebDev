@@ -104,7 +104,7 @@ p {
 .actions {
   display: grid;
   gap: 8px;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .actions a,
@@ -119,17 +119,22 @@ p {
   text-decoration: none;
 }
 
+.actions button:nth-child(1) {
+  background: #dcfce7;
+  border-color: #86efac;
+}
+
+.actions button:nth-child(2) {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
 .actions a {
   background: #e0f2fe;
   border-color: #7dd3fc;
 }
 
-.actions button:nth-child(2) {
-  background: #dcfce7;
-  border-color: #86efac;
-}
-
-.actions button:nth-child(3) {
+.actions button:nth-child(4) {
   background: #e0e7ff;
   border-color: #a5b4fc;
 }
