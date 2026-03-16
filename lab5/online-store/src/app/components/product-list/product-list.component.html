@@ -1,0 +1,16 @@
+﻿<section class="heading">
+  <h1>Product Catalog</h1>
+  <p *ngIf="!showNoProductsMessage()">
+    Showing <strong>{{ items().length }}</strong> product(s)
+  </p>
+</section>
+
+<section class="messages">
+  <p *ngIf="showNoProductsMessage()">No products in this category.</p>
+</section>
+
+<section class="grid" *ngIf="!showNoProductsMessage()">
+  @for (item of items(); track item.id) {
+    <app-product-item [product]="item" (delete)="handleDelete($event)" (like)="handleLike($event)"></app-product-item>
+  }
+</section>

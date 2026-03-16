@@ -1,0 +1,39 @@
+﻿<article class="card">
+  <a class="main-image-link" [href]="product().link" target="_blank" rel="noopener noreferrer">
+    <img class="main-image" [src]="currentImage()" [alt]="product().name" (error)="onImgError($event)" />
+  </a>
+
+  <div class="thumbs">
+    @for (img of product().images; track $index) {
+      <button type="button" [class.active]="isSelected($index)" (click)="selectImage($index)">
+        <img [src]="img" [alt]="product().name + ' thumbnail'" (error)="onImgError($event)" />
+      </button>
+    }
+  </div>
+
+  <div class="content">
+    <h3>{{ product().name }}</h3>
+    <p>{{ product().description }}</p>
+
+    <div class="meta">
+      <div class="price">
+        <strong>{{ product().price | number: '1.0-0' }} KZT</strong>
+        <span class="likes" aria-label="Likes: {{ product().likes }}">❤️ {{ product().likes }}</span>
+      </div>
+      <div class="rating" [attr.aria-label]="'Rating: ' + product().rating">
+        @for (filled of stars(); track $index) {
+          <span [class.filled]="filled">★</span>
+        }
+        <span class="value">{{ product().rating }}</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="button" (click)="incrementLikes()">Like</button>
+      <button type="button" (click)="requestDelete()">Delete</button>
+      <a [href]="product().link" target="_blank" rel="noopener noreferrer">Open on Kaspi</a>
+      <button type="button" (click)="shareOnWhatsApp()">Share WhatsApp</button>
+      <button type="button" (click)="shareOnTelegram()">Share Telegram</button>
+    </div>
+  </div>
+</article>

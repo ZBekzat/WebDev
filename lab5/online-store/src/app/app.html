@@ -1,0 +1,31 @@
+﻿<div class="app-shell">
+  <header class="topbar">
+    <a class="brand">Online Store KZ</a>
+  </header>
+
+  <main>
+    <section class="categories" *ngIf="showWelcomeMessage()">
+      <h2>Select a Category</h2>
+      @for (category of categories; track category.id) {
+        <button
+          type="button"
+          class="category"
+          (click)="selectCategory(category.id)"
+        >
+          {{ category.name }}
+        </button>
+      }
+    </section>
+
+    <section class="welcome" *ngIf="showWelcomeMessage()">
+      <p>Please select a category to browse products.</p>
+    </section>
+
+    <section class="category-header" *ngIf="!showWelcomeMessage()">
+      <button type="button" class="back" (click)="resetCategory()">← Back</button>
+      <h2>{{ selectedCategory()?.name }}</h2>
+    </section>
+
+    <app-product-list *ngIf="!showWelcomeMessage()" [products]="filteredProducts()"></app-product-list>
+  </main>
+</div>
