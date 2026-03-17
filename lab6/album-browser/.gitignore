@@ -1,0 +1,13 @@
+# See https://docs.github.com/articles/ignoring-files for more about ignoring files.
+
+/node_modules
+/dist
+/.angular/cache
+/out-tsc
+
+# IDE files
+/.idea
+/.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

@@ -1,0 +1,26 @@
+<section class="page-header">
+  <div>
+    <p class="eyebrow">Albums</p>
+    <h1>Browse all albums</h1>
+  </div>
+
+  <button type="button" class="secondary-action" (click)="loadAlbums()">Refresh</button>
+</section>
+
+<p class="status" *ngIf="isLoading">Loading albums...</p>
+<p class="status error" *ngIf="!isLoading && errorMessage">{{ errorMessage }}</p>
+<p class="status" *ngIf="!isLoading && !errorMessage && albums.length === 0">No albums found.</p>
+
+<div class="album-list" *ngIf="!isLoading && !errorMessage && albums.length > 0">
+  @for (album of albums; track album.id) {
+    <article class="album-card">
+      <a class="album-link" [routerLink]="['/albums', album.id]">
+        <span class="album-id">Album #{{ album.id }}</span>
+        <h2>{{ album.title }}</h2>
+        <p>User {{ album.userId }}</p>
+      </a>
+
+      <button type="button" class="delete-button" (click)="deleteAlbum(album.id)">Delete</button>
+    </article>
+  }
+</div>

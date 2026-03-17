@@ -1,0 +1,103 @@
+.page-header {
+  align-items: end;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  color: #0284c7;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+}
+
+.secondary-action {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  color: #0f172a;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 12px 18px;
+}
+
+.secondary-action:hover {
+  background: #f8fafc;
+}
+
+.status {
+  color: #475569;
+  font-weight: 600;
+}
+
+.status.error {
+  color: #b91c1c;
+}
+
+.album-list {
+  display: grid;
+  gap: 16px;
+}
+
+.album-card {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #dbe3eb;
+  border-radius: 18px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.album-link {
+  color: inherit;
+  flex: 1;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.album-link h2 {
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+
+.album-link p,
+.album-id {
+  color: #64748b;
+  margin: 0;
+}
+
+.delete-button {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  color: #b91c1c;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 12px 16px;
+}
+
+.delete-button:hover {
+  background: #fecaca;
+}
+
+@media (max-width: 640px) {
+  .page-header,
+  .album-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .delete-button {
+    width: 100%;
+  }
+}

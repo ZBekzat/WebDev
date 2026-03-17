@@ -1,0 +1,18 @@
+.info-card {
+  background: #ffffff;
+  border: 1px solid #dbe3eb;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+  max-width: 760px;
+  padding: 32px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+p {
+  color: #334155;
+  line-height: 1.7;
+  margin: 0 0 12px;
+}

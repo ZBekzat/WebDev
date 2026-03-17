@@ -1,0 +1,20 @@
+<section class="heading-row">
+  <div>
+    <p class="eyebrow">Album Photos</p>
+    <h1>Photos for album #{{ albumId }}</h1>
+  </div>
+  <a class="secondary-link" [routerLink]="['/albums', albumId]">Back</a>
+</section>
+
+<p class="status" *ngIf="isLoading">Loading photos...</p>
+<p class="status error" *ngIf="!isLoading && errorMessage">{{ errorMessage }}</p>
+<p class="status" *ngIf="!isLoading && !errorMessage && photos.length === 0">No photos found for this album.</p>
+
+<div class="photo-grid" *ngIf="!isLoading && !errorMessage && photos.length > 0">
+  @for (photo of photos; track photo.id) {
+    <article class="photo-card">
+      <img [src]="photo.thumbnailUrl" [alt]="photo.title">
+      <p [title]="photo.title">{{ photo.title }}</p>
+    </article>
+  }
+</div>
