@@ -3,8 +3,8 @@ from models import Cat, Dog
 
 def main():
     animals = [
-        Dog("Buddy", 3, "Dog", "Labrador"),
-        Dog("Rocky", 5, "Dog", "Beagle"),
+        Dog("Aktos", 3, "Dog", "Labrador"),
+        Dog("Arlan", 5, "Dog", "Beagle"),
         Cat("Luna", 2, "Cat", "White"),
         Cat("Milo", 4, "Cat", "Black"),
     ]
